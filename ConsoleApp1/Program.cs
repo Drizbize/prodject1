@@ -10,8 +10,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
+            string s = Console.ReadLine();
+            string s1 = Console.ReadLine();
+            int b;
+            int a;
+            int.TryParse(s, out a);
+            int.TryParse(s1, out b);
             Console.WriteLine(a + b);
             Console.ReadLine();
         }
