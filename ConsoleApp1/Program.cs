@@ -14,9 +14,27 @@ namespace ConsoleApp1
             string s1 = Console.ReadLine();
             int b;
             int a;
-            int.TryParse(s, out a);
-            int.TryParse(s1, out b);
-            Console.WriteLine(a + b);
+            bool success = int.TryParse(s, out a);
+            if (success)
+            {
+                
+            }
+            else
+            {
+                Console.WriteLine("Attempted conversion of '{0}' failed.",
+                                   s ?? "<null>");
+            }
+            bool success2 = int.TryParse(s1, out b);
+            if (success2)
+            {
+                Console.WriteLine(a + b);
+            }
+            else
+            {
+                Console.WriteLine("Attempted conversion of '{0}' failed.",
+                                   s1 ?? "<null>");
+            }
+            
             Console.ReadLine();
         }
     }
